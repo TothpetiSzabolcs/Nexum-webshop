@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.custom-btn {
+  @apply mt-4 px-5 py-2 xl:mt-8 xl:px-10 xl:py-3 lg:mt-6 lg:px-8 lg:py-3 md:mt-6 md:px-8 md:py-3 bg-[#4297d9] text-black font-normal md:font-semibold rounded-full hover:bg-[#3863bf] transition-all duration-400 shadow-black shadow-lg 
+}
