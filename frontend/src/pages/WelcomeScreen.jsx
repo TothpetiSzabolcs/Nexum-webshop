@@ -1,8 +1,11 @@
 import bg from "../assets/welcome_bg.png";
 import nexumLogo from "../assets/nexum_logo.png";
 import { motion } from "framer-motion";
+import {useNavigate} from "react-router-dom"
+
 
 const WelcomeScreen = () => {
+  const navigate = useNavigate()
   return (
     <>
       <img src={bg} alt="Welcome_bg" className="absolute -z-20 h-full w-full" />
@@ -48,6 +51,7 @@ const WelcomeScreen = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 3.4 }}
               className="custom-btn cursor-pointer"
+              onClick={() => navigate("/home")}
             >
               <motion.span
                 animate={{ scale: [1, 1.2, 1], opacity: [1, 0.5, 1] }}

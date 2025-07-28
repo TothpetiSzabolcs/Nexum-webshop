@@ -1,22 +1,28 @@
 import { useItems } from "../contexts/useItems.js";
 import Header from "../components/Header.jsx";
+import bg from "../assets/home_bg.jpg";
+import LottieAnimation from "../components/LottieAnimation";
 
 const Home = () => {
-const {items, loading} = useItems()
+  const { items, loading } = useItems();
 
   if (loading) {
-    return <div>Loading...</div>
-  }
-  return <>
-  <Header/>
-  <div>
-    {items.map((item) => (
-      <div key={item._id}>
-        <h1>{item.name}</h1>
+    return (
+      <div className="flex flex-col justify-center items-center h-screen w-screen bg-gray-100">
+        <LottieAnimation />
       </div>
-    ))}
-  </div>;
+    );
+  }
+  return (
+    <>
+      <img
+        src={bg}
+        alt="background"
+        className=" absolute w-full h-full -z-10"
+      />
+      <Header />
     </>
+  );
 };
 
 export default Home;
